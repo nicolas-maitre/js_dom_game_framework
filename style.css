@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+/*General UI*/
+.appContainer {
+    height: 100vh;
+    width: 100vw;
+}
+.gameArea, .endGameArea, .pauseArea, .menuArea{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+}
+/*GAME*/
+.backgroundLayer {
+    background-color: skyblue;
+}
+.backgroundLayer, .pipesLayer, .playerLayer {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+
+/*MENU*/
+.menuArea {
+    background-color: rgba(255,255,255,0.5);
+    text-align: center;
+}
+.menuTitleContainer {
+    margin-top: 20vh;
+    display: inline-block;
+}
+.menuTitleTop {
+    font-size: 11vh;
+    color: green;
+    text-shadow: 0 0 1vh lightgreen;
+    text-align: left;
+}
+.menuTitleBottom {
+    padding-left: 10vh;
+    font-size: 20vh;
+    margin-top: -7vh;
+    color: orange;
+    text-shadow: 0 0 1vh red;
+}
+@keyframes menuActionBlink{
+    from {color: red;}
+    to {color: yellow}
+}
+.menuActionsText {
+    text-shadow: 0 0 1vh orange;
+    font-size: 6vh;
+    color: red;
+    margin-top: 10vh;
+    animation: menuActionBlink 1s infinite alternate-reverse;
+}
+/*other*/
+.fpsCounter {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+}
